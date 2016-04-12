@@ -1,0 +1,27 @@
+succeed to download
+http://npidb.belozersky.msu.ru/data/pdb_new/Hbond/1lmb.pdb1.pdb.hb.txt
+http://npidb.belozersky.msu.ru/data/pdb_new/Hbond/1qna.pdb1.pdb.hb.txt
+
+
+
+
+single strand protein:
+http://npidb.belozersky.msu.ru/data/pdb_new/biounits/1qna.pdb1.pdb
+
+whole protein molecule:
+http://npidb.belozersky.msu.ru/data/pdb_new/biounits/1a1h.pdb1.pdb
+fasta file:
+http://npidb.belozersky.msu.ru/data/pdb_new/fasta/1qna.pdb1.pdb.fas
+http://npidb.belozersky.msu.ru/data/pdb_new/fasta/6mht.pdb1.pdb.fas
+http://npidb.belozersky.msu.ru/data/pdb_new/fasta/1qna.pdb2.pdb.fas
+http://npidb.belozersky.msu.ru/data/pdb_new/fasta/1lmb.pdb1.pdb.fas
+
+
+
+failed files, downloaded by hand
+2bop
+http://npidb.belozersky.msu.ru/data/pdb_new/fasta/pdb2bop.pdb.fas
+http://npidb.belozersky.msu.ru/data/pdb_new/Hbond/pdb2bop.pdb.hb.txt
+1qpi
+http://npidb.belozersky.msu.ru/data/pdb_new/fasta/1qpi.bel1.pdb.fas
+http://npidb.belozersky.msu.ru/data/pdb_new/Hbond/1qpi.bel1.pdb.hb.txt

@@ -1,0 +1,57 @@
+PDB code,Protein name,Resolution,Residue overlap patch ranked 1,Random prediction value,Number of residues in DNA_binding interface
+1qnaA,Transcription initiator factor TFIID_1,1.8,10,0.04,42
+1mjoB,Methionine repressor,2.1,10,0.09,17
+1d02A,Restriction endonuclease MUNI,1.7,10,0.1,27
+1bg1A,STAT3_,2.25,10,0.03,23
+1gdtA,Gamma_delta resolvase,3,10,0.15,33
+1hcrA,HIN recombinase,1.8,10,0.4,26
+1ewnA,AAG DNA repair glycosylase,2.1,9,0.06,25
+1qpzA,Purine repressor,2.5,9,0.06,29
+1fokA,Restriction endonuclease FOKI,2.8,9,0.09,67
+1am9A,Sterol regulatory element binding protein 1A,2.3,9,0.11,17
+1azpA,SAC7D,1.6,9,0.14,20
+1dp7P,RFX_DBD,1.5,9,0.14,21
+1a73A,Endonuclease I,1.8,9,0.15,36
+1dctA,DNA (cytosine_5) methylase,2.8,9,0.15,46
+1dmuA,Restriction endonuclease BGLI,2.2,9,0.15,50
+1vasA,Endonuclease V,2.75,9,0.16,43
+1bp7A,Endonuclease I_CREI,3,9,0.21,47
+1tupB,Tumour supressor P53,2.2,8,0.06,18
+2bop,E2 DNA_binding domain,1.7,8,0.08,23
+1crxA,Cre recombinase,2.4,8,0.1,65
+1dfmA,Restriction endonuclease BGII,1.5,8,0.14,45
+3htsB,Heat shock transcription factor,1.75,8,0.14,21
+1gd2E,BZIP transcription factor RAPI,2,8,0.15,15
+1qpiA,Tetracycline repressor,2.5,7,0.02,23
+1eqzA,Histone H2A,2.5,7,0.03,27
+1emhA,Uracil_DNA glycosylase,1.8,7,0.06,20
+1qrvA,Endonulcease V,2.2,7,0.06,27
+2irfJ,Interferon regulatory factor_2,2.2,7,0.1,24
+6mhtA,HHAI methyltransferase,2.05,7,0.1,40
+3pviA,Endonulcease PVUII,1.59,7,0.12,33
+1bdtA,Arc transcription regulator,2.5,7,0.14,15
+1ecrA,Replication terminator protein (TUS),2.7,7,0.15,69
+1pdnC,PRD paired domain,2.5,7,0.15,36
+1b3tA,EBNA_1 nuclear protein,2.2,7,0.19,34
+1ignA,RAP1,2.25,7,0.19,56
+1au7A,PIT_1 POU domain,2.3,7,0.22,44
+1sknP,SKN_1 transcription factor,2.5,7,0.25,21
+1a1hA,QGSR zinc finger,1.6,7,0.3,36
+1hwtC,HAP1,2.5,6,0,13
+1dizA,3_Methladenine DNA glycosylase,2.5,6,0.03,27
+1a36A,DNA topisomerase,2.8,5,0.01,71
+1qumA,Endonuclease IV,1.55,5,0.02,31
+2cgpA,Catabolic gene activator protein,2.2,5,0.02,17
+2hmi,HIV_1 reverse transcriptase,2.8,5,0.02,59
+1xbrA,Transcription factor T domain,2.5,5,0.03,30
+1eonA,Type II restriction enzyme ECORV,1.6,5,0.07,37
+1a3qA,NF_KAPPA_B,2.1,4,0,21
+1c9bA,Transcription factor IIB,2.65,4,0.02,22
+1mhdA,SMAD MH1 domain,2.8,4,0.02,17
+2bdpA,DNA polymerase I,1.8,4,0.04,65
+1ihfA,Integration host factor,2.5,4,0.07,30
+6croA,Lambda CRO,3,4,0.35,20
+1lmb3,Lambda repressor,1.8,1,0.07,23
+1tauA,DNA polymerase,3,0,0.02,46
+1zqfA,DNA polymerase _,2.9,0,0.02,28
+2dnjA,Deoxyribonuclease 1,2,0,0.02,22

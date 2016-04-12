@@ -1,0 +1,10 @@
+# File 2hmi.pdb1.pdb, PDB XXXX
+# Hydrogen bonds
+# NA Atom	Protein Atom	Dist.	Theta1	Theta2	Phi1	Phi2	Power
+DC807:E.O3'/1	ASN265:A.OD1/1	 3.23	 0.16	 1.39	 1.55	-1.59	0.126
+DC808:E.OP1/1	LYS353:A.NZ/1	 2.46	 1.48	 0.96	-0.22	 2.93	0.454
+DG810:E.OP2/1	GLY285:A.N/1	 3.06	 1.63	 0.50	 2.07	-1.07	0.199
+DC825:F.OP2/1	THR473:A.OG1/1	 3.09	 1.38	 0.81	 1.50	-1.65	0.177
+DA838:F.OP1/1	MET230:A.N/1	 3.05	 1.00	 0.78	 0.28	-2.86	0.366
+DA838:F.O3'/1	ASP185:A.OD2/1	 3.27	-1.00	 1.30	 0.00	 0.93	0.118
+# No water bridges
