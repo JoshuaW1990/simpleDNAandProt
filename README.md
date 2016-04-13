@@ -13,7 +13,7 @@ This project is the simple implementation of different machine techniques on the
 ([Reference](http://nar.oxfordjournals.org/content/35/5/1465))
 
 ##Dataset:
-Use the same dataset from the ([article](http://nar.oxfordjournals.org/content/31/24/7189))
+Use the same dataset from the ([article](http://nar.oxfordjournals.org/content/31/24/7189)).
 Download the pdb file and the interaction record file from ([NPIDB](http://npidb.belozersky.msu.ru/))
 
 ##Todolist
