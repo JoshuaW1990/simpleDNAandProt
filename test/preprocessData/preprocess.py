@@ -144,7 +144,7 @@ for i in range(len(nameList)):
 
 """
 Print the result to form the data set for input and output
-"""
+
 print "export the output and input into files "
 pathname = "./dataset/"
 with open(pathname+"input.txt", 'w') as f:
@@ -159,3 +159,4 @@ with open(pathname+"output.txt", 'w') as f:
         string = ' '.join(labels)
         string = string + "\n"
         f.write(string)
+"""
