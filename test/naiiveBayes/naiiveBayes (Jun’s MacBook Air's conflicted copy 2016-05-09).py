@@ -111,6 +111,7 @@ Train the value of theta
 Return theta
 """
 def Classification(theta, tag_dict, feature_dict, features):
+    predict_tag = None
     total = sum(tag_dict.values())
     prob = []
     for tag in range(2):
@@ -213,7 +214,7 @@ def Train(tag_dict, feature_dict, input_set, output_set):
 
 def loo_CrossValidation(combine_set):
     accuracy = []
-    f = open("NaiveOutput1.txt", 'w')
+    f = open("NaiiveOutput.txt", 'w')
     for i in range(len(combine_set)):
         print i
         string = "running time: " + str(i) + '\n'
@@ -249,11 +250,19 @@ def loo_CrossValidation(combine_set):
         f.write(string)
         accuracy.append(tmpAccuracy)
     finalAccuracy = np.mean(accuracy)
+    f.write(str(finalAccuracy))
     f.close()
     return finalAccuracy
 
 
 
 combine_set = PreprocessData()
+
+(dataset, input_set, output_set, test_set) = BuildDataset(combine_set, 55)
+"""
+(tag_dict, feature_dict) = BuildDict(dataset)
+(theta, confusionMatrix) = Train(tag_dict, feature_dict, input_set, output_set)
+
 print "final accuracy after crossvalidation is: "
 print loo_CrossValidation(combine_set)
+"""

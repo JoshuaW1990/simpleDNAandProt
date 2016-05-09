@@ -10,6 +10,9 @@ from sklearn import svm
 import numpy as np
 from math import sqrt
 import tensorflow as tf
+from pybrain.supervised.trainers import BackpropTrainer
+from pybrain.datasets import SupervisedDataSet
+from pybrain.tools.shortcuts import buildNetwork
 
 """
 Set up a dictionary for converting the pdb 3-letters residue name to fasta 1-letter residue name
@@ -162,14 +165,6 @@ def preprocess_data(pssm, input_set, output_set, test_set):
 
     return (X_train, Y_train, X_test, Y_test)
 
-
-
-"""leave one out cross validation for the dataset
-
-def Cross_validation(classifier, input_set, output_set):
-"""
-
-
 """helper function
 """
 #accuracy
@@ -183,18 +178,60 @@ def accurayc(pred_labels, labels):
             correct += 1
     return float(correct) / float(total)
 
+"""leave one out cross validation for the dataset
+"""
+def Cross_validation():
+    test_accuracy = []
+    combine_set = PreprocessData()
+    f = open("ann1.txt", 'w')
+    for i in range(len(combine_set)):
+        print i
+        string = "running time: " + str(i) + '\n'
+        f.write(string)
+        (dataset, input_set, output_set, test_set) = BuildDataset(combine_set, i)
+        pssm = BuildPSSM(input_set)
+        (X_train, Y_train, X_test, Y_test) = preprocess_data(pssm, input_set, output_set, test_set)
+        x = tf.placeholder("float", [None, 9])
+        W = tf.Variable(tf.zeros([9, 2]))
+        b = tf.Variable(tf.zeros([2]))
+        y = tf.nn.softmax(tf.matmul(x,W) + b)
+
+        y_ = tf.placeholder("float", [None,2])
+        cross_entropy = -tf.reduce_sum(y_*tf.log(y))
+
+        train_step = tf.train.GradientDescentOptimizer(0.01).minimize(cross_entropy)
+
+        init = tf.initialize_all_variables()
+        sess = tf.Session()
+        sess.run(init)
+
+        for i in range(1000):
+            sess.run(train_step, feed_dict={x: X_train, y_: Y_train})
+
+        correct_prediction = tf.equal(tf.argmax(y,1), tf.argmax(y_,1))
+        accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
+        test_acc = sess.run(accuracy, feed_dict={x: X_test, y_: Y_test})
+        sess.close()
+        print "test accuracy: ", test_acc
+        string = "test accuracy is " + str(test_acc) + '\n'
+        f.write(string)
+        test_accuracy.append(test_acc)
+    print np.mean(test_accuracy)
+    f.close()
+    return test_accuracy
 
 
-combine_set = PreprocessData()
-(dataset, input_set, output_set, test_set) = BuildDataset(combine_set, 1)
-pssm = BuildPSSM(input_set)
-(X_train, Y_train, X_test, Y_test) = preprocess_data(pssm, input_set, output_set, test_set)
+test_accuracy = Cross_validation()
+
+
+
+
 
 """Using tensorflow
 """
 
 """Base model
-"""
+
 x = tf.placeholder("float", [None, 9])
 W = tf.Variable(tf.zeros([9, 2]))
 b = tf.Variable(tf.zeros([2]))
@@ -225,5 +262,10 @@ sess.close()
 print acc
 
 
-"""Advanced model
+test accuracy:
+0.886029
 """
+
+
+
+

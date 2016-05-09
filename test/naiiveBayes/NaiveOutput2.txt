@@ -1,0 +1,168 @@
+running time: 0
+theta = 0.12 accuracy = 0.913827488782
+test accuracy is 0.670588235294
+running time: 1
+theta = 0.14 accuracy = 0.910669546436
+test accuracy is 0.797794117647
+running time: 2
+theta = 0.15 accuracy = 0.911610613487
+test accuracy is 0.733333333333
+running time: 3
+theta = 0.13 accuracy = 0.914192523208
+test accuracy is 0.672839506173
+running time: 4
+theta = 0.14 accuracy = 0.913364897417
+test accuracy is 0.65
+running time: 5
+theta = 0.13 accuracy = 0.913587455167
+test accuracy is 0.784615384615
+running time: 6
+theta = 0.14 accuracy = 0.913465527255
+test accuracy is 0.757575757576
+running time: 7
+theta = 0.15 accuracy = 0.912712996993
+test accuracy is 0.836734693878
+running time: 8
+theta = 0.14 accuracy = 0.912654346565
+test accuracy is 0.807692307692
+running time: 9
+theta = 0.16 accuracy = 0.910301877
+test accuracy is 0.824372759857
+running time: 10
+theta = 0.15 accuracy = 0.913345032172
+test accuracy is 0.776315789474
+running time: 11
+theta = 0.14 accuracy = 0.912525184688
+test accuracy is 0.835748792271
+running time: 12
+theta = 0.13 accuracy = 0.914385013139
+test accuracy is 0.754658385093
+running time: 13
+theta = 0.19 accuracy = 0.912850192921
+test accuracy is 0.842639593909
+running time: 14
+theta = 0.14 accuracy = 0.911572700297
+test accuracy is 0.774691358025
+running time: 15
+theta = 0.13 accuracy = 0.91306904082
+test accuracy is 0.746478873239
+running time: 16
+theta = 0.12 accuracy = 0.911041649066
+test accuracy is 0.783687943262
+running time: 17
+theta = 0.13 accuracy = 0.913790186125
+test accuracy is 0.745819397993
+running time: 18
+theta = 0.14 accuracy = 0.913310636884
+test accuracy is 0.802631578947
+running time: 19
+theta = 0.13 accuracy = 0.914000338581
+test accuracy is 0.809836065574
+running time: 20
+theta = 0.14 accuracy = 0.911987222596
+test accuracy is 0.708520179372
+running time: 21
+theta = 0.12 accuracy = 0.913237397963
+test accuracy is 0.75
+running time: 22
+theta = 0.14 accuracy = 0.913373353343
+test accuracy is 0.744
+running time: 23
+theta = 0.12 accuracy = 0.91291215706
+test accuracy is 0.765
+running time: 24
+theta = 0.16 accuracy = 0.910397368193
+test accuracy is 0.795774647887
+running time: 25
+theta = 0.17 accuracy = 0.91256014601
+test accuracy is 0.876923076923
+running time: 26
+theta = 0.13 accuracy = 0.912365951743
+test accuracy is 0.775956284153
+running time: 27
+theta = 0.14 accuracy = 0.914063147427
+test accuracy is 0.769230769231
+running time: 28
+theta = 0.13 accuracy = 0.91268984978
+test accuracy is 0.8
+running time: 29
+theta = 0.13 accuracy = 0.916345347863
+test accuracy is 0.761904761905
+running time: 30
+theta = 0.12 accuracy = 0.914497213674
+test accuracy is 0.802083333333
+running time: 31
+theta = 0.13 accuracy = 0.913397606383
+test accuracy is 0.862068965517
+running time: 32
+theta = 0.12 accuracy = 0.911803934645
+test accuracy is 0.723577235772
+running time: 33
+theta = 0.14 accuracy = 0.912858926342
+test accuracy is 0.855769230769
+running time: 34
+theta = 0.14 accuracy = 0.913804601534
+test accuracy is 0.756097560976
+running time: 35
+theta = 0.12 accuracy = 0.912792158834
+test accuracy is 0.785714285714
+running time: 36
+theta = 0.13 accuracy = 0.911774572291
+test accuracy is 0.825641025641
+running time: 37
+theta = 0.13 accuracy = 0.911460101868
+test accuracy is 0.805309734513
+running time: 38
+theta = 0.13 accuracy = 0.912917150921
+test accuracy is 0.794520547945
+running time: 39
+theta = 0.13 accuracy = 0.913260135135
+test accuracy is 0.838709677419
+running time: 40
+theta = 0.14 accuracy = 0.913242009132
+test accuracy is 0.797297297297
+running time: 41
+theta = 0.12 accuracy = 0.908617340632
+test accuracy is 0.834804539723
+running time: 42
+theta = 0.18 accuracy = 0.912186530236
+test accuracy is 0.69387755102
+running time: 43
+theta = 0.13 accuracy = 0.913536972125
+test accuracy is 0.766423357664
+running time: 44
+theta = 0.14 accuracy = 0.912274821952
+test accuracy is 0.777173913043
+running time: 45
+theta = 0.12 accuracy = 0.911380597015
+test accuracy is 0.788990825688
+running time: 46
+theta = 0.16 accuracy = 0.911604125141
+test accuracy is 0.851724137931
+running time: 47
+theta = 0.13 accuracy = 0.912996509889
+test accuracy is 0.670588235294
+running time: 48
+theta = 0.14 accuracy = 0.911905361188
+test accuracy is 0.82
+running time: 49
+theta = 0.13 accuracy = 0.912017529075
+test accuracy is 0.766798418972
+running time: 50
+theta = 0.18 accuracy = 0.909263904507
+test accuracy is 0.835125448029
+running time: 51
+theta = 0.14 accuracy = 0.91240632806
+test accuracy is 0.733944954128
+running time: 52
+theta = 0.14 accuracy = 0.914181274404
+test accuracy is 0.817073170732
+running time: 53
+theta = 0.13 accuracy = 0.912647329265
+test accuracy is 0.814102564103
+running time: 54
+theta = 0.14 accuracy = 0.913259805954
+test accuracy is 0.75
+running time: 55
+theta = 0.13 accuracy = 0.912822252374
+test accuracy is 0.795107033639

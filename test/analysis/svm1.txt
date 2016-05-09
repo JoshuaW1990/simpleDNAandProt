@@ -1,0 +1,112 @@
+running time: 0
+test accuracy is 0.752941176471
+running time: 1
+test accuracy is 0.950367647059
+running time: 2
+test accuracy is 0.961403508772
+running time: 3
+test accuracy is 0.858024691358
+running time: 4
+test accuracy is 0.8375
+running time: 5
+test accuracy is 0.861538461538
+running time: 6
+test accuracy is 0.848484848485
+running time: 7
+test accuracy is 0.857142857143
+running time: 8
+test accuracy is 0.826923076923
+running time: 9
+test accuracy is 0.976702508961
+running time: 10
+test accuracy is 0.894736842105
+running time: 11
+test accuracy is 0.937198067633
+running time: 12
+test accuracy is 0.89751552795
+running time: 13
+test accuracy is 0.913705583756
+running time: 14
+test accuracy is 0.95987654321
+running time: 15
+test accuracy is 0.849765258216
+running time: 16
+test accuracy is 0.975177304965
+running time: 17
+test accuracy is 0.882943143813
+running time: 18
+test accuracy is 0.842105263158
+running time: 19
+test accuracy is 0.908196721311
+running time: 20
+test accuracy is 0.959641255605
+running time: 21
+test accuracy is 0.889830508475
+running time: 22
+test accuracy is 0.888
+running time: 23
+test accuracy is 0.91
+running time: 24
+test accuracy is 0.950704225352
+running time: 25
+test accuracy is 0.861538461538
+running time: 26
+test accuracy is 0.92349726776
+running time: 27
+test accuracy is 0.692307692308
+running time: 28
+test accuracy is 0.942857142857
+running time: 29
+test accuracy is 0.783068783069
+running time: 30
+test accuracy is 0.770833333333
+running time: 31
+test accuracy is 0.850574712644
+running time: 32
+test accuracy is 0.943089430894
+running time: 33
+test accuracy is 0.913461538462
+running time: 34
+test accuracy is 0.886178861789
+running time: 35
+test accuracy is 0.928571428571
+running time: 36
+test accuracy is 0.958974358974
+running time: 37
+test accuracy is 0.964601769912
+running time: 38
+test accuracy is 0.876712328767
+running time: 39
+test accuracy is 0.921146953405
+running time: 40
+test accuracy is 0.878378378378
+running time: 41
+test accuracy is 0.986128625473
+running time: 42
+test accuracy is 0.984693877551
+running time: 43
+test accuracy is 0.868613138686
+running time: 44
+test accuracy is 0.934782608696
+running time: 45
+test accuracy is 0.960244648318
+running time: 46
+test accuracy is 0.943103448276
+running time: 47
+test accuracy is 0.929411764706
+running time: 48
+test accuracy is 0.965
+running time: 49
+test accuracy is 0.928853754941
+running time: 50
+test accuracy is 0.989247311828
+running time: 51
+test accuracy is 0.935779816514
+running time: 52
+test accuracy is 0.853658536585
+running time: 53
+test accuracy is 0.891025641026
+running time: 54
+test accuracy is 0.85
+running time: 55
+test accuracy is 0.932721712538

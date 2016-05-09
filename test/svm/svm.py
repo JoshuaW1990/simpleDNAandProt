@@ -151,18 +151,10 @@ def preprocess_data(pssm, input_set, output_set, test_set):
 
     return (X_train, Y_train, X_test, Y_test)
 
-
-
-"""leave one out cross validation for the dataset
-
-def Cross_validation(classifier, input_set, output_set):
-"""
-
-
 """helper function
 """
 #accuracy
-def accurayc(pred_labels, labels):
+def accuracy(pred_labels, labels):
     correct = 0
     total = len(labels)
     for i in range(len(labels)):
@@ -172,15 +164,36 @@ def accurayc(pred_labels, labels):
             correct += 1
     return float(correct) / float(total)
 
+"""leave one out cross validation for the dataset
+"""
+def Cross_validation(classifier):
+    test_acc = []
+    combine_set = PreprocessData()
+    f = open("svm1.txt", 'w')
+    for i in range(len(combine_set)):
+        print i
+        string = "running time: " + str(i) + '\n'
+        f.write(string)
+        (dataset, input_set, output_set, test_set) = BuildDataset(combine_set, i)
+        pssm = BuildPSSM(input_set)
+        (X_train, Y_train, X_test, Y_test) = preprocess_data(pssm, input_set, output_set, test_set)
+        clf = classifier
+        clf.fit(X_train, Y_train)
+        train_pred = clf.predict(X_train)
+        test_pred = clf.predict(X_test)
+        train_accuracy = accuracy(train_pred, Y_train)
+        test_accuracy = accuracy(test_pred, Y_test)
+        print "train accuracy: ", train_accuracy
+        print "test accuracy: ", test_accuracy
+        string = "test accuracy is " + str(test_accuracy) + '\n'
+        f.write(string)
+        test_acc.append(test_accuracy)
+    print np.mean(test_acc)
+    f.close()
+    return test_acc
 
 
-combine_set = PreprocessData()
-(dataset, input_set, output_set, test_set) = BuildDataset(combine_set, 1)
-pssm = BuildPSSM(input_set)
-(X_train, Y_train, X_test, Y_test) = preprocess_data(pssm, input_set, output_set, test_set)
-clf = svm.SVC(kernel='rbf')
-clf.fit(X_train, Y_train)
-train_pred = clf.predict(X_train)
-test_pred = clf.predict(X_test)
-print "train accuracy: ", accurayc(train_pred, Y_train)
-print "test accuracy: ", accurayc(test_pred, Y_test)
+test_acc = Cross_validation(svm.SVC(kernel='rbf'))
+
+
+
