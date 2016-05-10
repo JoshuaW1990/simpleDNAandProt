@@ -1,41 +1,53 @@
 import numpy as np
-import scipy.stats as stat
+import scipy.stats as stats
 import csv
 
-
+accuracy = []
+# Read Naive Bayes model
 for i in range(1, 3):
+    filename = "NaiveOutput" + str(i) + ".txt"
+    test_accuracy = []
+    with open(filename, 'r') as f:
+        lines = f.readlines()
+    for line in lines:
+        if line.startswith("test"):
+            string = line.split(" ")
+            test_acc = string[-1][:-1]
+            test_acc = float(test_acc)
+            test_accuracy.append(test_acc)
+    accuracy.append(test_accuracy)
 
-with open("NaiveOutput.txt", 'r') as f:
-    lines = f.readlines()
+# Read svm
+for i in range(1, 3):
+    filename = "svm" + str(i) + ".txt"
+    test_accuracy = []
+    with open(filename, 'r') as f:
+        lines = f.readlines()
+    for line in lines:
+        if line.startswith("test"):
+            string = line.split(" ")
+            test_acc = string[-1][:-1]
+            test_acc = float(test_acc)
+            test_accuracy.append(test_acc)
+    accuracy.append(test_accuracy)
+
+# Read Neural Network
+for i in range(1, 3):
+    filename = "ann" + str(i) + ".txt"
+    test_accuracy = []
+    with open(filename, 'r') as f:
+        lines = f.readlines()
+    for line in lines:
+        if line.startswith("test"):
+            string = line.split(" ")
+            test_acc = string[-1][:-1]
+            test_acc = float(test_acc)
+            test_accuracy.append(test_acc)
+    accuracy.append(test_accuracy)
 
 
-time = []
-test_acc = []
-train_acc = []
-theta = []
-for line in lines:
-    if line.startswith("running"):
-        string = line.split(" ")
-        time.append(int(string[-1].split("\n")[0]))
-        continue
-    if line.startswith("theta"):
-        string = line.split("=")
-        theta.append(float(string[1].split(" ")[1]))
-        train_acc.append(float(string[-1].split("\n")[0]))
-        continue
-    if line.startswith("test"):
-        string = line.split(" ")
-        test_acc.append(float(string[-1].split("\n")[0]))
-        continue
-    else:
-        continue
-
-time = np.array(time)
-test_acc = np.array(test_acc)
-train_acc = np.array(train_acc)
-theta = np.array(theta)
-
-with open("data.csv", "w") as csvfile:
-    write = csv.writer(csvfile, dialect = 'excel')
-    for i in range(len(time)):
-        write.writerow([time[i], test_acc[i], train_acc[i], theta[i]])
+(tValue, pValue) = stats.ttest_ind(accuracy[1], accuracy[3])
+print tValue
+print pValue
+mean_accuracy = np.mean(accuracy, axis=1)
+print "finish the program"
