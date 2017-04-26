@@ -1,22 +1,34 @@
-#README
+# README
 
 
-##Introduction
-This project is the simple implementation of different machine techniques on the recognizing the protein-DNA binding region according.
-([The critical reference](http://www.mdpi.com/1422-0067/16/3/5194))
+## Introduction
 
-##Techniques
-* Naive Bayes model ([Reference](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwi1oKLloYjMAhUKqh4KHYnuBkIQFggcMAA&url=http%3A%2F%2Flib.dr.iastate.edu%2Fcgi%2Fviewcontent.cgi%3Farticle%3D2782%26context%3Drtd&usg=AFQjCNHYze8sldjzQdtA5dhBao2qu1bSqA&sig2=H_Zji6sEkTpw8R-QCOPmGw&bvm=bv.119028448,d.dmo))
-* Support Vector machine
-([Reference](http://nar.oxfordjournals.org/content/37/suppl_2/W396)
-* Artificial Neural Network
-([Reference](http://nar.oxfordjournals.org/content/35/5/1465))
+In this project, naive bayes model, support vector machine and neural network are implemented for recognizing the DNA binding sites on protein sequence. Through leave one out cross validation and t-test, it is indicated that support vector machine has the best performance, while the performance of the naive bayes model is the worst
 
-##Dataset:
-Use the same dataset from the ([article](http://nar.oxfordjournals.org/content/31/24/7189)).
-Download the pdb file and the interaction record file from ([NPIDB](http://npidb.belozersky.msu.ru/))
+## Dataset:
 
-##Todolist
-- [ ] Support Vector Machine
-- [ ] Neural Network
-- [ ] Add the structural feature and the physical feature.
+### Data Collection
+
+The list of the proteins were obtained from the [article](http://nar.oxfordjournals.org/content/31/24/7189).
+All the pdb file and the interaction file were downloaded from [NPIDB](http://npidb.belozersky.msu.ru/).
+
+### Data Preprocess
+
+#### Generate the residue sequence of the protein from the pdb file
+
+
+
+#### Generate the label sequence of the protein from the pdb file and the interactive file
+
+## Techniques
+
+### Naive Bayes model ([Reference](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwi1oKLloYjMAhUKqh4KHYnuBkIQFggcMAA&url=http%3A%2F%2Flib.dr.iastate.edu%2Fcgi%2Fviewcontent.cgi%3Farticle%3D2782%26context%3Drtd&usg=AFQjCNHYze8sldjzQdtA5dhBao2qu1bSqA&sig2=H_Zji6sEkTpw8R-QCOPmGw&bvm=bv.119028448,d.dmo))
+
+
+
+### Support Vector machine ([Reference](http://nar.oxfordjournals.org/content/37/suppl_2/W396))
+
+### Artificial Neural Network ([Reference](http://nar.oxfordjournals.org/content/35/5/1465))
+
+
+

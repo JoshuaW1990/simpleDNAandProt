@@ -5,8 +5,8 @@ import urllib2
 import os
 
 """
-collect the pdb id
-
+collect the pdb id from smallData.csv file
+"""
 pdbidList = []
 with open("smallData.csv", 'r') as csvfile:
     reader = csv.reader(csvfile)
@@ -17,7 +17,6 @@ with open("smallData.csv", 'r') as csvfile:
         pdbidList.append(pdbid)
 pdbidList = pdbidList[1:]
 result = ' '.join(pdbidList)
-"""
 
 
 """
@@ -28,9 +27,10 @@ pdb2fasta = {'CYS': 'C', 'ASP': 'D', 'SER': 'S', 'GLN': 'Q', 'LYS': 'K',
      'GLY': 'G', 'HIS': 'H', 'LEU': 'L', 'ARG': 'R', 'TRP': 'W',
      'ALA': 'A', 'VAL':'V', 'GLU': 'E', 'TYR': 'Y', 'MET': 'M'}
 
-"""
-Download pdb file
 
+"""
+Download pdb file from the website: http://npidb.belozersky.msu.ru/
+"""
 print "Downlad PDB file"
 pathname = "./PDB/"
 count = 1
@@ -44,12 +44,13 @@ for pdbname in pdbidList:
     try:
         response = urllib2.urlopen(targeturl)
     except:
+        # If the corresponding url is not correct, we should  print the protein name and download it manually
         print pdbname, " fail to retrive the data, need to be downloaded by hand."
         continue
     pdbfile = response.read()
     with open(completename, 'w') as f:
         f.write(pdbfile)
-"""
+
 
 """
 Obtain the protein sequence from pdb
@@ -106,13 +107,37 @@ for filename in os.listdir("./PDB/"):
     sequenceList.append(residueList)
     ReferenceBook.append(residueReferenceBook)
 
+"""
+Download the corresponding interaction file from the same website: http://npidb.belozersky.msu.ru
+"""
+print "Download intearction file"
+pathname = "./interaction/"
+count = 1
+originalurl = "http://npidb.belozersky.msu.ru/data/pdb_new/Hbond/1qna.pdb1.pdb.hb.txt"
+for pdbname in nameList:
+    print "count: ", count, "pdbname: ", pdbname
+    count += 1
+    filename = pdbname + ".txt"
+    completename = pathname + filename
+    targeturl = originalurl.replace("1qna", pdbname)
+    try:
+        response = urllib2.urlopen(targeturl)
+    except:
+        # If the corresponding url is not correct, we should  print the protein name and download it manually
+        print pdbname, " fail to retrive the data."
+        continue
+    with open(completename, 'w') as f:
+        for line in response:
+            f.write(line)
+
 
 """
-Search all the txt file to get the output file
+Search all the interaction file to get the output file
 """
 print "Analyze the interaction file to get the output label"
 count = 1
 tagSequenceList = []
+# Looping through all interaction file listed in namedList
 for i in range(len(nameList)):
     # Prepare the necessary information for a protein sequence
     pdbname = nameList[i]
@@ -125,7 +150,9 @@ for i in range(len(nameList)):
     completename = "./interaction/" + pdbname + ".txt"
     with open(completename, 'r') as f:
         lines = f.readlines()
+    # Check the interaction file line by line (each line may represent one interaction sites between protein and the DNA)
     for line in lines:
+        # filter the lines to remove the information which not representing an interaction
         if line.startswith("#"):
             continue
         string = line.split("\t")
@@ -135,6 +162,7 @@ for i in range(len(nameList)):
         if not SearchChainID.startswith(chainID):
             continue
         index = residueReferenceBook.index(SearchResidue)
+        # Mark the result label as 1 after filtering the result
         tagSequence[index] = 1
         res1 = residueList[index]
         res2 = pdb2fasta[SearchResidue[0:3]]
@@ -144,7 +172,7 @@ for i in range(len(nameList)):
 
 """
 Print the result to form the data set for input and output
-
+"""
 print "export the output and input into files "
 pathname = "./dataset/"
 with open(pathname+"input.txt", 'w') as f:
@@ -159,4 +187,3 @@ with open(pathname+"output.txt", 'w') as f:
         string = ' '.join(labels)
         string = string + "\n"
         f.write(string)
-"""
